@@ -1,5 +1,5 @@
 <template>
-  <nav class="flex gap-8">
+  <nav class="hidden gap-8 xl:flex">
     <NuxtLink
       :to="navigationItem.redirectTo"
       v-for="navigationItem in navigationItems"
