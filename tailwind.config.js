@@ -163,7 +163,21 @@ export default {
       fuchsia: colors.fuchsia,
       pink: colors.pink,
       rose: colors.rose,
+      toro: {
+        50: "#F6F4FE",
+        100: "#EEEBFC",
+        200: "#DED9FB",
+        300: "#C7BBF7",
+        400: "#AA95F0",
+        500: "#8D69E9",
+        600: "#7D4ADD",
+        700: "#6D37CA",
+        800: "#6131B4",
+        900: "#4C278B",
+        950: "#2E175E",
+      },
     }),
+
     columns: {
       auto: "auto",
       1: "1",

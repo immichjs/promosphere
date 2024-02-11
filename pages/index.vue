@@ -1,8 +1,7 @@
 <template>
-  <main class="flex flex-col items-center py-8 min-h-screen">
+  <main class="flex flex-col items-center py-12 min-h-screen">
     <Carousel />
-    <Informative />
-    <Marketing />
+    <BestSellers />
   </main>
 </template>
 

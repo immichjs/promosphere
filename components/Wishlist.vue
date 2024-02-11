@@ -6,7 +6,7 @@
     />
 
     <div
-      class="absolute -top-2 -right-1 w-[18px] h-[18px] bg-indigo-800 text-white flex justify-center items-center text-xs rounded-full"
+      class="absolute -top-2 -right-1 w-[18px] h-[18px] bg-toro-800 text-white flex justify-center items-center text-xs rounded-full"
     >
       {{ wishlistItems }}
     </div>

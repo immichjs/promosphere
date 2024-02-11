@@ -1,9 +1,9 @@
 <template>
   <section
-    class="w-full lg:max-w-[1280px] container overflow-hidden relative rounded-[2.5rem]"
+    class="w-full lg:max-w-[1280px] container overflow-hidden relative rounded-[2rem]"
   >
     <Swiper
-      class="swiper-container"
+      class="h-[200px] w-full rounded-3xl"
       :modules="modules"
       :slides-per-view="1"
       :pagination="pagination"
@@ -22,11 +22,8 @@
         </button>
       </div>
 
-      <SwiperSlide v-for="slide in 5" :key="slide">
-        <div
-          class="flex items-center justify-center h-full"
-          :style="{ background: generateHexColor() }"
-        >
+      <SwiperSlide v-for="slide in 5" :key="slide" class="h-full">
+        <div class="flex items-center justify-center h-full bg-violet-800">
           <span class="text-white text-3xl">Slide {{ slide }}</span>
         </div>
       </SwiperSlide>
@@ -35,7 +32,9 @@
 </template>
 
 <script setup lang="ts">
-const modules = [
+import type { ModuleOptions } from "nuxt-swiper";
+
+const modules: ModuleOptions[] = [
   SwiperAutoplay,
   SwiperEffectCreative,
   SwiperNavigation,
@@ -55,32 +54,9 @@ const autoplay = {
   delay: 4000,
   disableOnInteraction: true,
 };
-
-function generateHexColor() {
-  const r = Math.floor(Math.random() * 256);
-  const g = Math.floor(Math.random() * 256);
-  const b = Math.floor(Math.random() * 256);
-
-  const corHex = `#${r.toString(16).padStart(2, "0")}${g
-    .toString(16)
-    .padStart(2, "0")}${b.toString(16).padStart(2, "0")}`;
-
-  return corHex;
-}
 </script>
 
-<style>
-.swiper-container {
-  width: 100%;
-  height: 490px;
-  overflow: hidden;
-  border-radius: 40px;
-}
-
-.swiper-slide {
-  height: 100%;
-}
-
+<style scoped lang="postcss">
 .swiper-button-prev {
   left: 64px;
 }
@@ -91,23 +67,11 @@ function generateHexColor() {
 
 .swiper-button-prev,
 .swiper-button-next {
-  background-color: #fff;
-  width: 3rem;
-  height: 3rem;
-  border-radius: 9999px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  @apply text-indigo-800;
+  @apply text-violet-800 shadow bg-white flex rounded-full items-center justify-center w-12 h-12 cursor-pointer;
 }
 
 .swiper-button-prev::after,
 .swiper-button-next::after {
   display: none;
-}
-
-.swiper-pagination-bullet-active {
-  @apply bg-indigo-800;
 }
 </style>

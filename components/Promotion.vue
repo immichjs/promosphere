@@ -1,5 +1,5 @@
 <template>
-  <section class="h-10 flex items-center justify-center bg-indigo-800">
+  <section class="h-10 flex items-center justify-center bg-toro-800">
     <div class="container flex items-center justify-center">
       <p class="text-white font-medium text-sm">
         {{ description }}

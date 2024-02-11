@@ -3,7 +3,7 @@
     <NuxtLink
       :to="navigationItem.redirectTo"
       v-for="navigationItem in navigationItems"
-      class="text-sm text-zinc-700 hover:text-indigo-800"
+      class="text-sm text-zinc-700 hover:text-toro-800"
     >
       {{ navigationItem.label }}
     </NuxtLink>
